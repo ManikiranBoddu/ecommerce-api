@@ -95,18 +95,6 @@ The SQLite database is stored in ecommerce.db in the project root.
 Ensure the JWT_SECRET in .env is a strong, unique key in production.
 The frontend uses a simple HTML/CSS/JS interface with no external frameworks.
 
-Troubleshooting
-
-SyntaxError: Unexpected identifier 'primaryKey':
-This error occurs due to a typo in server.js. Ensure the User model definition does not contain extraneous text like "Ian". The corrected line should be:id: {
-  type: DataTypes.INTEGER,
-  primaryKey: true,
-  autoIncrement: true
-},
-
-
-Verify the server.js file matches the provided version.
-
 
 If database errors occur, ensure the DATABASE_PATH is correct and the directory is writable.
 For CORS issues, ensure the cors middleware is correctly configured.
